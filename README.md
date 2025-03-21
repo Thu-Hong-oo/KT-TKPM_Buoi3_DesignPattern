@@ -7,10 +7,11 @@ Trong một giao diện người dùng, các thành phần như nút bấm, các
 * Hãy áp dụng Composite Design Pattern để giải bài toán trên.					
 Yêu cầu: vẽ sơ đồ trước khi viết code.					
 #
-Composite Design Pattern là một mẫu thiết kế cấu trúc cho phép xây dựng các đối tượng thành cấu trúc cây và làm việc với chúng như với các đối tượng riêng lẻ. 
-* Component: Interface hoặc lớp cơ sở định nghĩa các phương thức chung cho tất cả các thành phần
-* Leaf: Đối tượng cơ bản, không có con (trong trường hợp này là tập tin)
-* Composite: Đối tượng phức hợp, có thể chứa các đối tượng con (trong trường hợp này là thư mục)
+Một Composite Pattern bao gồm các thành phần cơ bản sau:
+* Base Component : là một interface hoặc abstract class quy định các method chung cần phải có cho tất cả các thành phần tham gia vào mẫu này.
+* Leaf : là lớp hiện thực (implements) các phương thức của Component. Nó là các object không có con.
+* Composite : lưu trữ tập hợp các Leaf và cài đặt các phương thức của Base Component. Composite cài đặt các phương thức được định nghĩa trong interface Component bằng cách ủy nhiệm cho các thành phần con xử lý.
+* Client: sử dụng Base Component để làm việc với các đối tượng trong Composite.
 
 ### Áp dụng
 * Thư mục có thể chứa thư mục con và tập tin (Composite)
