@@ -16,3 +16,4 @@ Composite Design Pattern là một mẫu thiết kế cấu trúc cho phép xây
 * Thư mục có thể chứa thư mục con và tập tin (Composite)
 * Tập tin chỉ chứa dữ liệu, không chứa thành phần khác (Leaf)
 * Cả thư mục và tập tin đều có thể hiển thị thông tin (phương thức chung trong Component)
+![image](https://github.com/user-attachments/assets/eeb70864-d245-43b6-9f5b-4df3cbd6f6ef)
