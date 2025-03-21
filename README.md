@@ -4,7 +4,7 @@ Một thư mục có thể chứa nhiều tập tin hoặc các thư mục con.
 Một tập tin chỉ có thể chứa dữ liệu, không thể chứa thư mục hoặc tập tin khác.
 Cả thư mục và tập tin đều có thể được hiển thị với thông tin của chúng."								
 Trong một giao diện người dùng, các thành phần như nút bấm, các hộp thoại, thanh điều hướng có thể là các phần tử riêng biệt hoặc nhóm lại thành các phần tử phức tạp hơn. Composite Design Pattern có thể giúp bạn tổ chức các phần tử UI này vào các nhóm hợp lý mà không cần phải thay đổi cách thức hoạt động của chúng.								
-*Hãy áp dụng Composite Design Pattern để giải bài toán trên.					
+* Hãy áp dụng Composite Design Pattern để giải bài toán trên.					
 Yêu cầu: vẽ sơ đồ trước khi viết code.					
 #
 Composite Design Pattern là một mẫu thiết kế cấu trúc cho phép xây dựng các đối tượng thành cấu trúc cây và làm việc với chúng như với các đối tượng riêng lẻ. 
