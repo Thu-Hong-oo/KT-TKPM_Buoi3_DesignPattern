@@ -8,9 +8,9 @@ Hãy áp dụng Composite Design Pattern để giải bài toán trên.
 Yêu cầu: vẽ sơ đồ trước khi viết code.					
 #
 Composite Design Pattern là một mẫu thiết kế cấu trúc cho phép xây dựng các đối tượng thành cấu trúc cây và làm việc với chúng như với các đối tượng riêng lẻ. 
-Component: Interface hoặc lớp cơ sở định nghĩa các phương thức chung cho tất cả các thành phần
-Leaf: Đối tượng cơ bản, không có con (trong trường hợp này là tập tin)
-Composite: Đối tượng phức hợp, có thể chứa các đối tượng con (trong trường hợp này là thư mục)
+\n Component: Interface hoặc lớp cơ sở định nghĩa các phương thức chung cho tất cả các thành phần
+\n Leaf: Đối tượng cơ bản, không có con (trong trường hợp này là tập tin)
+\n Composite: Đối tượng phức hợp, có thể chứa các đối tượng con (trong trường hợp này là thư mục)
 
 # Áp dụng
 Thư mục có thể chứa thư mục con và tập tin (Composite)
