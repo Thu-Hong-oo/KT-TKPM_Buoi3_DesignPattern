@@ -24,6 +24,7 @@ Một Composite Pattern bao gồm các thành phần cơ bản sau:
 * Composite Pattern chỉ nên được áp dụng khi nhóm đối tượng phải hoạt động như một đối tượng duy nhất (theo cùng một cách).
 * Composite Pattern có thể được sử dụng để tạo ra một cấu trúc giống như cấu trúc cây.
 
+***
 
 ## Ex: Observer Design Pattern
 * Khi giá của một cổ phiếu thay đổi, các nhà đầu tư đã đăng ký để theo dõi cổ phiếu đó sẽ nhận thông báo ngay lập tức về sự thay đổi.
@@ -49,5 +50,45 @@ Các thành phần tham gia Observer Pattern:
 ![image](https://github.com/user-attachments/assets/07a330a1-8389-4796-bd21-39f8a1e52b22)
 ![image](https://github.com/user-attachments/assets/0a4d6310-9a6b-4c1b-ad0d-73d571d7b0ec)
 
+***
+## Ex: Adapter Design Pattern (Wrapper Pattern)
 
-    
+Một dịch vụ web yêu cầu đầu vào ở định dạng JSON, nhưng một hệ thống khác chỉ hỗ trợ XML. Bạn có thể viết một adapter để chuyển đổi dữ liệu từ XML sang JSON và ngược lại.					
+* Hãy áp dụng Adapter Design Pattern vào trường hợp trên					
+Yêu cầu: vẽ sơ đồ trước khi viết code.
+
+### Định nghĩa
+Adapter Pattern is a structural design pattern that convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn’t otherwise because of incompatible interfaces.
+*Adapter Pattern (Người chuyển đổi) là một trong những Pattern thuộc nhóm cấu trúc (Structural Pattern). Adapter Pattern cho phép các inteface (giao diện) không liên quan tới nhau có thể làm việc cùng nhau. Đối tượng giúp kết nối các interface gọi là Adapter.
+    ![image](https://github.com/user-attachments/assets/ac2b0969-e6b6-4816-8bd5-a220156dc437)
+
+***
+Một Adapter Pattern bao gồm các thành phần cơ bản sau:
+* Adaptee: định nghĩa interface không tương thích, cần được tích hợp vào.
+* Adapter: lớp tích hợp, giúp interface không tương thích tích hợp được với interface đang làm việc. Thực hiện việc chuyển đổi interface cho Adaptee và kết nối Adaptee với Client.
+* Target: một interface chứa các chức năng được sử dụng bởi Client (domain specific).
+* Client: lớp sử dụng các đối tượng có interface Target.
+### Có hai cách để thực hiện Adapter Pattern dựa theo cách cài đặt (implement) của chúng:
+* Object Adapter – Composition (Chứa trong)(phổ biến nên dùng hơn): trong mô hình này, một lớp mới (Adapter) sẽ tham chiếu đến một (hoặc nhiều) đối tượng của lớp có sẵn với interface không tương thích (Adaptee), đồng thời cài đặt interface mà người dùng mong muốn (Target). Trong lớp mới này, khi cài đặt các phương thức của interface người dùng mong muốn, sẽ gọi phương thức cần thiết thông qua đối tượng thuộc lớp có interface không tương thích.
+  ![image](https://github.com/user-attachments/assets/71e2943e-fc96-4ecd-b1b3-1c9a6544b664)
+* Class Adapter – Inheritance (Kế thừa) : trong mô hình này, một lớp mới (Adapter) sẽ kế thừa lớp có sẵn với interface không tương thích (Adaptee), đồng thời cài đặt interface mà người dùng mong muốn (Target). Trong lớp mới, khi cài đặt các phương thức của interface người dùng mong muốn, phương thức này sẽ gọi các phương thức cần thiết mà nó thừa kế được từ lớp có interface không tương thích.
+![image](https://github.com/user-attachments/assets/7375beb5-943c-418c-906f-c8b177c424f5)
+
+
+
+![image](https://github.com/user-attachments/assets/39891357-042f-438f-b52c-7d612126ddad)
+![image](https://github.com/user-attachments/assets/2b956357-cc6a-40bc-aeaf-c794bec01298)
+
+
+
+* Bài tập thêm:
+* Bạn đang làm việc với hệ thống quản lý nhân viên trong một công ty. Công ty có hai loại nhân viên:
+* FullTimeEmployee (Nhân viên toàn thời gian) - đã triển khai interface Employee.
+* Freelancer (Nhân viên tự do) - không triển khai Employee, nhưng bạn muốn quản lý họ như một Employee.
+* Yêu cầu:
+* Tạo interface Employee với các phương thức getName(), getSalary().
+* Tạo class FullTimeEmployee triển khai Employee.
+* Tạo class Freelancer có name và hourlyRate, nhưng không triển khai Employee.
+* Tạo class FreelancerAdapter giúp Freelancer hoạt động như Employee (giả sử Freelancer có lương = hourlyRate * 160 giờ).
+Viết chương trình quản lý danh sách List<Employee>, trong đó chứa cả nhân viên toàn thời gian và freelancer.
+
